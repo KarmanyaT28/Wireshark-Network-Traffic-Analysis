@@ -1,0 +1,137 @@
+Benefits of traffic analysis
+
+1.) Troubleshooting network problems
+2.) Intrusion detection and forensics
+3.) Gain a better understanding of protocols
+
+/**************************************************************************************************************/
+
+Network Administrators
+
+1.) Monitor network traffic
+2.) Resolve bottleneck issues
+3.) Build firewall rules
+
+
+Developers
+
+1.) Understand protocol and application behavior
+2.) See how the routines behave and if application works the way they anticipated
+3.) Can determine if it is the application or the network that is causing slow response times
+
+
+Security Professionals
+
+1.) Use Wireshark to look at the conversations and see if there are any strange port numbers
+2.) Determine what program uses that port and whether it is malicious or not
+
+
+Students can study protocol behavior
+
+
+Control Technicians
+
+1.) Monitor building  automation traffic
+2.) BACnet and LonWorks
+
+/**************************************************************************************************************/
+
+Rich in Features
+
+1.) Analyze network problems
+2.) Detect network misuse
+3.) Perform regulatory compliance
+4.) Monitor bandwidth use
+5.) Identify unwanted protocols
+6.) Gather and report network statistics
+
+
+Installation - https://www.wireshark.org/download.html
+
+/**************************************************************************************************************/
+
+Explore the Wireshark interface
+
+Under the capture: You will see alot of options
+and you will notice sparklines , which tells us that we have an active connection and it is exchanging data
+Below Capture - it says "Use this filter"
+You can use a capture filter, the instructor usually doesn't because it limits you to only what you are filtering, and you miss everything else
+
+
+You can remove External Capture that will take off the USBPcap.
+Now If we assume, with the ethernet, we don't have anything going on, as it is a wireless connection.
+
+Looking at the USBPcap, you can see some of the devices, go into USB Input Device, select the mouse and start it.
+
+Under capture, select Options - 
+You will see three options - Input, Output and Options, where you can again select a filter for caapturing.
+
+Enable Promiscuous mode on all interfaces
+Enable monitor mode on all 802.11 interfaces
+
+Go to Output, there you can capture to a permanent file, wireshark will save it in a temporary file until you save it.
+Suppose you are running a capture run and you are putting a specific coloring rule in order to look something on the network, add that under ring buffer. The ring buffer will keep on overwriting it again and again.
+(Use a ring buffer after how many files?)
+
+Then in Options, 
+Resolve MAC addresses - That would give us the manufacturer's name, simply comes from a file.
+Resolve Network names - Generally, we don't select that as it would be hitting the DNS servers a lot, that would just generate alot of traffic.
+Resolve transport names - It will tell us what application it thinks it is associated with.
+
+You can select how many captures you want and then simply stop capturing.
+
+/**************************************************************************************************************/
+
+
+Getting Help
+
+When working with wireshark, you can access built-in help resources and documentation to better understand all the features, filters, and network analysis tools.
+In this segment , we will review the many ways to get help in wireshark.
+
+That includes, the Help menu, User Guide, and Questions and Answers
+
+
+
+/**************************************************************************************************************/
+
+Tap into the Data Streams
+
+
+Tap into the Network - What you see will depend on the network architecture, Two Types of Ethernet environments (Shared or Hub Based, Switched Network)
+
+Wireless 802.11b/g/n - A hub that will allow you to see all the traffic
+(If you are on Wireless network, you will go through an access point, which is acting like a hub where we can see all the traffic)
+
+Wired on a Switch - If tapping into a wired network, you will most likely go through a switch and then you will only see your own traffic (If you want to see all the traffic, we have
+choices)
+        See All Traffic - Port mirroring or SPAN (Switched port analysis)
+        Monitor on the device
+        Full-Duplex tap in line with traffic - Need a special adapter
+
+
+When you open wireshark, it displays a welcome message with a list of available network connections on your current device.
+After you chooce an interface and begin the capture, the interface gathers up network traffic, all packet analysis tools work in the same way.
+They gather the traffic, they decode it or break it down, and then they display it in human-readable format.
+First Step - Gather the traffic , before doing this you need to have a correct capture engine, for Windows - use Npcap, for Linux - use lippcap
+If you dont have the correct capture engine, you wont be able to capture the traffic
+
+Keep in mind that traffic enters the network interface card (one frame at a time) (BITS)
+
+Packet analysis software converts those bits into readable form for analysis
+
+It has Source, Source Port , Destination, Destination Port, Protocol.
+
+The heart of this is where the decoding takes place
+
+Wireshark was Ethereal before 2006, but the main core is still the same
+
+EPAN - Ethereal Packet Analyzer - It is the packet analyzing engine for Wireshark
+Protocol Tree
+Dissectors
+Dissector Plugins
+Display Filters
+
+        
+
+
+
