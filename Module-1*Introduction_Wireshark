@@ -6,18 +6,21 @@ Network Administrators, students,teachers
 Learn the importance of understanding and identifying the traffic on your network
 Troubleshoot, identify latency issues, and actively identify network attacks
 
+/**************************************************************************************************************/
 
 We will use precaptured files from online repositories
 We will examine precaptured packets
 Understand the field values of the protocols as to what is considered normal behavior
 A high-level knowledge of networking technology will clarify some of concepts discussed in this course
 
+/**************************************************************************************************************/
 
 Challenges - 
 a.) Hands-on opportunities to practice and master what you have learned throughout this course
 
 Start => Objectives, Find Files =====> Complete => Solution, Insight =====> Goals => Practice, Have Fun
 
+/**************************************************************************************************************/
 
 Wireshark - Wireshark is a network analysis tool. Any active capture should only be used in an environment where you have full control or on a network that you have written permission that specifically allows you to capture and analyze traffic
 
