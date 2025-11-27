@@ -1,0 +1,15 @@
+Explaining Transmission Control Protocol
+Layer-4
+
+Connection oriented transport
+Begins with a 3-way handshake
+Data is sequences and acknowledged
+Supports windowing and flow control
+
+TCP Header - Source Port, Destination Port, Sequence Number, Ack Number, Offset, Reserved , Flags, Window Size, Checksum, Urgent Pointer
+Options and Data
+
+
+
+
+
