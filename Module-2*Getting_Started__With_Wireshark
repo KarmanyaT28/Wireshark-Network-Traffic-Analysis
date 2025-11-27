@@ -1,0 +1,18 @@
+You can use capture and display filters, a capture filter is applied prior to capture, and will only capture what you filter and nothing else
+a display filter - a filter used during an active capture or a precaptured packet.
+
+Important thing to know: 
+they are different and there are shortcuts for display filters.
+
+Apply a display filter as "ftp" - FTP won't work but here you will capture other traffic as well.
+
+Apply a capture filter as "tcp port 21" - select the correct interface 
+
+Statistics
+
+
+Shortcuts in Wireshark
+
+TCP Display filter
+1.) Click on a frame, select a property, right click on prepare a filter and you might see it there in display filter search bar== "tcp.dstport == 443"
+2.) This time, select another property, right click on apply as filter and you might see it ran and can see the results.
