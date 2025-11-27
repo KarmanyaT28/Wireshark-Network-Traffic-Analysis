@@ -16,3 +16,5 @@ Shortcuts in Wireshark
 TCP Display filter
 1.) Click on a frame, select a property, right click on prepare a filter and you might see it there in display filter search bar== "tcp.dstport == 443"
 2.) This time, select another property, right click on apply as filter and you might see it ran and can see the results.
+3.) Now, when you select apply as filter , you can also select add/ or options and the filter will be prepared or applied.
+
