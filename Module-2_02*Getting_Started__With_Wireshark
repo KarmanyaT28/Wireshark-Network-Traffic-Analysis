@@ -1,0 +1,30 @@
+Grasping the OSI Model
+
+Packet analysis requires a solid understanding of encapsulation and protocols
+
+Standardizes the functions of data transformations
+Breaks down into layers
+Outlines how data is encapsulated
+
+
+
+Key Points
+
+
+PDU - Protocol Data Unit
+
+7.Applications Layer - Initiates contact with the network  (Protocols - HTTP,FTP,SMTP)  (PDU - Data)
+
+6.Presentation Layer - Formats data, optional compression, and encryption (PDU - Data)
+
+5.Session Layer - Initiates, maintains and tears down session (PDU - Data)
+
+4.Transport Layer - Transports data (Protocols - TCP,UDP)   (PDU - Segment)  Address - Port
+
+3.Network Layer - Addressing,routing (Protocols - IP,ICMP)  (PDU - Packet)  Address - IP
+
+2.Data Link Layer - Frame formation (Protocols - Ethernet II)  (PDU - Frame) Address - MAC
+
+1.Physical Layer - Data is transmitted on the media  (PDU - Bits)
+
+
