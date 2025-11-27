@@ -1,0 +1,23 @@
+Understanding the TCP-IP suite
+
+TCP/IP Suite or Internet Suite
+
+A set of protocols that allows us to communicate and exchange data on the network
+
+Defines how data is packetized, addressed, transmitted, and routed
+
+
+The key protocols are - TCP,UDP,IP,ICMP
+
+Network Layer
+The main players are IP and ICMP
+
+Internet Protocol - Responsible for routing and addressing
+Internet Control Messaging Protocol - Provides error, routing, and control messages
+
+
+Transport Layer
+Provides data transport
+
+TCP - connection-oriented
+UDP - connectionless
