@@ -1,0 +1,18 @@
+Generating a frame
+
+Frame Formation
+
+We start with a stump of data, it might be a web request - and the next step would be we create a segment , which would be your TCP/UDP Header (Segment Port Address)
+Within that address, we have the source and destination Port address
+The next part of encapsulation is adding the IP Header, at the network layer , it is called a packet.
+Within that, we have a source and destination IP address
+The last part of this frame formation is the frame header.
+Within that, we have a MAC Address
+and with a frame, not only is there a header, we also have a trailer. That is the frame check sequence
+This is to provide error detection on a network by creating a cyclic redundancy check value that the network will check while travelling along its way
+
+
+All the way on the top, is of course your frame header - , Frame is Ethernet - II and you see the source and destination MAC addresses within that frame header
+Next represents the network layer in form of packet - IPV4
+Transport Layer - Segment - TCP, SRC PORT, DAT PORT , SEQ , ACK , LEN
+A web request - Data - HTTP
