@@ -1,0 +1,28 @@
+Recognize the Wireshark Interface
+
+Q.1 - By Default, Wireshark saves packets to a temporary file. To save files using a ring buffer, select ______________
+Ans - Capture
+
+Q.2 - In frame 714, what represents the transport layer header? __________________
+Ans - 
+Transmission Control Protocol, Src Port: 443, Dst Port: 59667, Seq: 4420, Ack: 2359, Len: 1440
+
+Q.3 - In frame 714, what represents the frame header? _____________________
+Ans - 
+Ethernet II, Src: Routerboardc_69:90:2f (18:fd:74:69:90:2f), Dst: e6:5c:11:d1:e7:06 (e6:5c:11:d1:e7:06)
+
+Q.4 - The last part of frame formation is the frame header where we add the source and destination _________ address.
+Ans - 
+MAC
+
+Q.5 - The _____ layer is responsible for transporting data by using either a connection-oriented connectionless protocol. The PDU at this point is a segment, and the address is a port address.
+Ans - 
+transport
+
+Q.6 - Which of the following actions will apply a display filter directly in Wireshark?
+Ans - 
+Right-click and select "Apply as Filter"
+
+Q.7 - In order to capture ONLY FTP traffic, use _____ as a capture filter.
+Ans - 
+tcp port 21
