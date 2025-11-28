@@ -1,0 +1,32 @@
+Recognizing the TCP Connection process
+
+1.Connection oriented transport
+2.Begins with a three way handshake
+3.Ends by terminating the session
+
+A three way handshake begins by the client sending a SYN packet to the server
+That SYN packet synchronizes the sequence numbers,
+If the server accepts, it responds by a synchronization acknowledgement
+The client then sends a final acknowledgement, a connection is established
+A socket is created and we can begin to exchange data
+
+Refusing a Connection
+
+-> SYN packet with a RST
+-> No response may mean a firewall
+-> ICMP destination unreachable packet
+-> The host may try again with another SYN packet
+
+
+A connection can be terminated in one of several ways
+
+-> The connection will be timed out and will be closed
+-> No password sent, so the connection is RST
+-> An exchange of FIN packets for normal termination
+
+
+
+A normal termination  - 
+Client sends an ACK to Server, and Server replied with FIN-ACK to Client
+Client sends an FIN-ACK to Server, and Server sends an ACK to Client
+
