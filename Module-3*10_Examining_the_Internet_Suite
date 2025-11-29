@@ -1,0 +1,38 @@
+Deep Packet Analysis of Common Protocols
+Dissecting DNS - Domain Name System resides at the Application Layer of the OSI Model
+
+Maps a host name to an IP Address
+Uses UDP Port 53 for requests
+Uses TCP Port 53 for zone transfer
+
+Queries and Responses
+
+Client sends query to a DNS server for an IP address
+Server responds with information
+Can ask other DNS servers for the information
+
+Types of Records
+
+1 - A - Address. A 32-bit IPv4 address. It is used to convert a domain name to an IPv4
+2 - NS - Name Server. It identifies the authoritative servers for a zone
+5 - CNAME - Canonical Name. It defines an alias for the official name of a host
+6 - SOA - Start of authority. It marks the beginning of a zone. It is usually the first record in a zone file
+12 - PTR - Pointer. Used to convert an IP address to domain name.
+13 - HINFO - Shows host information
+15 - MX - Mail exchange. Redirects mail to a mail server
+28 - AAAA - It shows the IP version 6 address
+252 - AXFR - A request for the transfer for the entire zone
+255 - ANY - Request for all records
+
+
+
+DNS Sections
+
+Message Header
+Questions
+Answers RR
+Authority RR
+Additional RR
+
+statdns.com - Important site which deals with different issues on DNS
+
