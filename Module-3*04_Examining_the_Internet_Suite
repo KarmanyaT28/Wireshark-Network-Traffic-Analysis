@@ -1,48 +1,211 @@
-Viewing the TCP handshake and teardown
+1. Understanding the TCP Handshake (3-Way Handshake)
 
-the handshake and termination.
-Go on CloudShark, and you can either follow along in CloudShark, or you can go to Export and download the file, and open it in Wireshark. 
-I've opened this capture in Wireshark, and it's almost a perfect example of a complete conversation. 
-But let's take a look at the flow graph. We'll go to Statistics. 
-And we'll go to the Flow Graph. 
-And there's no need to filter it because its entire conversation is simply with the client to the server. 
-Now let's take a look at the top three packets. 
-There's where you see your three-way handshake. 
-And then down below we see an exchange of data, and then somewhere in the middle, you see quit and closing connection. 
-So we now know it's time to terminate the session. 
-And the last four packets are where we close the conversation. 
-I'll close that. 
-And now let's take a look at the three-way handshake. 
-I'll scroll up here and give us a little more room where we can take a look at frame one. 
-Let's just first start with frame one. Now when we look at frame one, we have a frame header, we have the IP header, and the TCP header. 
-As you notice there's no data. There won't be any because it's just a handshake. 
-No data is exchanged. 
-You can also see then, up here in the upper right-hand corner, length equals zero. 
-So let's take a look at the TCP header. 
-This indicates what's going on if we take a look at the flags, and I'll drop this down, and here you see the SYN flag set. 
-Again, that's from the client to the server, trying to initiate a conversation. Now with that first packet, going from the client to the server, comes with it some options. 
-If I place my cursor on the TCP header and then look down below the TCP header is 40 bytes. 
-The TCP header is 20 bytes at least, but with options it's more, now at this point it's 40 bytes. 
-But let's take a look at the options. Here's your options. 
-And we'll drop this down and you can see, what it is, is the client communicating to the server what options would I like to agree upon. 
-And so you understand, for example, the following. 
-Client is seeing that the maximum segment size is 1,460 bytes. 
-Also SACK is permitted and SACK is selective acknowledgment. 
-Meaning keep sending the data, even if it's not in order, 
-I'll put it in the correct order. 
-Here we see timestamps and windows scaling. Now keep in mind. It has to be a multiple of four. 
-Now with each of these, and if you look down below, you can see the size of each of those options, 
-window scaling is three bytes. So we have to add a no op, which is essentially a placeholder, to bring that total up to 20 bytes. 
-And then that with the TCP header gives us our 40 bytes. The server then responds with a SYN-ACK. 
-And I'll scroll down here, and here you can see the acknowledgement flag and the SYN flag. 
-Now keep in mind that SYN flag is set only on the first two packets of the three-way handshake. 
-After that, you won't see it again in that conversation. 
-Now we'll bring this up and take a look at the TCP header. And again, it's 40 bytes because the server is sending the server options. And as you can see, those are the following options the server sends to the client. 
-Then we go to frame three and that's our final step in this. And let's take a look at the flags. Now we see that the acknowledgement flag is set, and that means the conversation is ready to begin. 
-After this we can start to exchange data. And in this point, 
-you can see the TCP header is dropped to 32 bytes because there are a few less options as you can see down below. 
-Now we'll bring this back up, and now we'll take a look at the end of the conversation. Down below, we'll go to frame 12. And here's where you see the exchange of data from the client to the server. Now here it's seeing an acknowledgement. 
-And that acknowledgement is probably at the end of the conversation where the client is saying that it's acknowledging that it's received whatever data it's received from the server. 
-The server responds with a FIN ACK saying, I'm pretty much done with everything. We can close this connection. 
-Then the client then responds again with a FIN ACK, and then we see our final acknowledgement, and that will then close the connection and terminate the session. 
-So as you can see, TCP is a connection oriented protocol where you will see a three-way handshake and a tear down of the session.
+TCP is a connection-oriented protocol. Before any data is exchanged, both devices (client and server) must agree to communicate.
+This is done using the three-way handshake:
+
+Step 1 — SYN (Client → Server)
+
+Frame 1 in Wireshark.
+
+TCP flags: SYN = 1
+
+Purpose:
+
+Client says: “I want to start a connection.”
+
+Client sends:
+
+Initial Sequence Number (ISN)
+
+TCP Options (MSS, SACK, Window Scale, Timestamps, etc.)
+
+Options in the SYN packet:
+
+You will see these inside the TCP Header → Options section:
+
+MSS (Maximum Segment Size): Typically 1460 bytes
+
+SACK Permitted: Allows selective ACK
+
+Window Scale: Needed for large windows
+
+Timestamps: Used for RTT, PAWS
+
+NOP (No-Operation): Padding bytes to make sure TCP header is a multiple of 4 bytes (because TCP header must be 32 bits aligned)
+
+This makes the TCP header bigger (e.g., 40 bytes instead of 20).
+
+Step 2 — SYN-ACK (Server → Client)
+
+Frame 2 in Wireshark.
+
+TCP flags: SYN = 1, ACK = 1
+
+Purpose:
+
+Server acknowledges the client’s SYN: “I received your request.”
+
+Server sends its own SYN: “I also want to connect.”
+
+Server sends its chosen TCP Options.
+
+Again, header often ~40 bytes.
+
+Step 3 — ACK (Client → Server)
+
+Frame 3 in Wireshark.
+
+TCP flags: ACK = 1
+
+Purpose:
+
+Client acknowledges the server’s SYN.
+
+Now the connection is established.
+
+TCP header size now smaller (~20–32 bytes) because options aren’t needed anymore.
+
+After this step → data transfer can start.
+
+2. Viewing This in Wireshark
+Go to:
+
+Statistics → Flow Graph → TCP flow
+
+This graph shows:
+
+First 3 packets = Handshake
+
+Middle packets = Data exchange
+
+Last 4 packets = Connection Teardown
+
+3. Data Exchange Phase
+
+This is where actual application-layer content is exchanged:
+
+Example:
+
+HTTP requests/responses
+
+FTP commands
+
+QUIT messages (in your capture)
+
+You’ll see packets with:
+
+ACKs
+
+PSH flags
+
+Sequence and ACK numbers increasing
+
+TCP payload (data)
+
+No handshake/teardown flags appear here.
+
+4. TCP Teardown (4-Way Termination)
+
+When either side finishes sending data, they close the connection using a four-packet FIN sequence.
+
+The sequence is:
+
+Step 1 — FIN-ACK (Server → Client)
+
+Server says: “I’m done sending data. Let’s close.”
+
+Flags: FIN = 1, ACK = 1
+
+Step 2 — ACK (Client → Server)
+
+Client acknowledges server’s FIN:
+“Okay, I got your FIN.”
+
+Step 3 — FIN-ACK (Client → Server)
+
+Client also sends FIN:
+“I’m done too.”
+
+Step 4 — Final ACK (Server → Client)
+
+Server acknowledges client’s FIN.
+
+Connection is now fully closed.
+
+You’ll see these as the last four packets in Wireshark.
+
+5. Why FIN needs 4 packets (not 3 like SYN)?
+
+Because FIN is one-directional:
+
+Each side independently tells the other that it is done sending data.
+Handshake is mutual (bidirectional), but close is separate.
+
+6. Why no Data in Handshake Packets?
+
+Handshakes only exchange control information, not user data.
+Therefore:
+
+Length = 0
+
+No TCP payload
+
+Only headers + options
+
+7. Summary Table (Easy to Memorize)
+Phase	Packet	Flags	Meaning
+Handshake	SYN	SYN	Client → Server: Start connection
+	SYN-ACK	SYN, ACK	Server → Client: Acknowledge and accept
+	ACK	ACK	Client → Server: Connection established
+Teardown	FIN-ACK	FIN, ACK	First side ends connection
+	ACK	ACK	Other side acknowledges FIN
+	FIN-ACK	FIN, ACK	Second side ends connection
+	ACK	ACK	Final ACK: connection closed
+8. What to Look for in Wireshark (Checklist for Exams/Labs)
+Handshake
+
+✔ SYN
+✔ SYN-ACK
+✔ ACK
+✔ TCP Options (MSS, WS, SACK, TS, NOP)
+✔ Header size > 20 bytes
+
+Data Exchange
+
+✔ PSH/ACK
+✔ Increasing sequence/ack numbers
+✔ TCP payload visible
+
+Teardown
+
+✔ FIN-ACK
+✔ ACK
+✔ FIN-ACK
+✔ Final ACK
+✔ No RST (reset) unless abnormal close
+
+9. One-Line Explanation for Each Packet (What to Write in Labs)
+
+Packet 1 (SYN):
+Client initiates the connection and proposes TCP options.
+
+Packet 2 (SYN-ACK):
+Server accepts and responds with its own options.
+
+Packet 3 (ACK):
+Client completes handshake; connection established.
+
+Data packets:
+Bi-directional exchange of application data with ACKs.
+
+FIN-ACK (Server):
+Server begins orderly shutdown.
+
+ACK (Client):
+Client acknowledges server’s FIN.
+
+FIN-ACK (Client):
+Client ends its side of the conversation.
+
+Final ACK (Server):
+Server confirms and terminates session.
