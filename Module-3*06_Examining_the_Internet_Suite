@@ -1,0 +1,48 @@
+Outlining Ipv4
+
+For this segment, we will focus on IP version four
+
+IPv4 Header:
+Version, IHL, Type of service, Total Length
+Identification, Flags, Fragment Offset
+Time to Live, Protocol, Header Checksum
+Source Address
+Destination Address
+Options and Data
+
+
+IPv4 
+Addressing and routing
+Connectionless: best effort
+Quality of service
+
+
+
+
+Dissecting IPv6
+
+
+IPv4 - Uses a 32-bit address represented by dotted decimal notation
+
+IPv6 - Uses a 128-bit address represented using hexadecimal notation
+
+
+
+IPv6 Features - 
+Stateful and stateless autoconfiguration
+No broadcast, uses multicast
+Optional extension headers
+  Fragmentation or IP Security
+
+
+
+IPv6 Requires ICMPv6
+
+Network Layer in version 4 - IGMP,ICMP,IPv4,ARP
+Network Layer in version 6 - ICMPv6, IPv6 (IGMP and ARP not necessary)
+
+
+Streamlined IPv6 header
+Version, Traffic Class, Flow Label, Payload Length, Next header, Hop limit, Source Address, Destination Address
+
+
