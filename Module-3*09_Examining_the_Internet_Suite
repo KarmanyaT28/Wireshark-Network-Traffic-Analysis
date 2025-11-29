@@ -1,0 +1,45 @@
+Question 1 of 10
+IPv6 uses _____ to communicate with multiple hosts.
+multicast
+
+Question 2 of 10
+Specifies the format of packets or datagrams, and the addressing scheme. Handles the logical addressing in the TCP/IP protocol suite. Decides where a packet is to be sent next, choosing the best path using a routing table.
+IP
+
+Question 3 of 10
+ICMPv6 assumes additional roles on the network. As a result, when using ICMPv6 _____ and IGMP are no longer necessary.
+ARP
+
+Question 4 of 10
+TCP options must be in multiples of four (4) bytes. If 10 bytes of options are added to the TCP header, two single byte _____ will be added to the options header.
+No-Operation
+
+Question 5 of 10
+The protocol suite for the Internet that provides a set of guidelines for networking protocols to enable computers to communicate over a network.
+TCP/IP
+
+Question 6 of 10
+_____ carries error, routing and control messages. It does NOT exchange data between systems.
+ICMP
+
+Question 7 of 10
+Connectionless protocol used as an alternative to TCP when reliability is not an issue.
+UDP
+
+Question 8 of 10
+Transmission Control Protocol _____.
+supports sliding windows
+
+Question 9 of 10
+What is the correct sequence of packets in the TCP three-way handshake?
+SYN, SYN-ACK, ACK
+
+Question 10 of 10
+_____uses UDP as the transport-layer protocol.
+TFTP
+
+
+
+
+
+
