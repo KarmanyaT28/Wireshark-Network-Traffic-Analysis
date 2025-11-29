@@ -1,0 +1,40 @@
+Breaking down User Datagram Protocol
+
+A lightweight protocol
+
+-> Connectionless transport layer service
+-> No handhsake or connection process
+-> No ordering or reliability services
+-> No teardown
+
+
+
+Time Sensitive
+UDP Applications
+-> Domain name system
+-> Voice over IP (VoIP)
+-> Routing information protocol (RIP)
+-> Trivial file transfer protocol (TFTP)
+
+
+
+UDP Header
+
+Source Port  |   Destination Port
+
+  Length     |     Checksum
+
+
+UDP Checksum
+
+-> Error detection
+-> Optional with IPv4
+-> Mandatory with IPv6
+
+
+
+
+
+
+
+
