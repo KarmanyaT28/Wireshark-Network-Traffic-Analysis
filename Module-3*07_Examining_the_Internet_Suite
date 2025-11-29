@@ -1,0 +1,78 @@
+Comprehending ICMP
+
+ICMP - resides at the network layer of the OSI model
+Must be implemented by every IP module
+No data is exchanged
+Used to communicate updates or error messages
+Used by the ping utility echo request/echo reply
+
+ICMP Messages are two types - Error-reporting and Query
+
+Error-Reporting
+Type - 3  - Destination unreachable
+Type - 4  - Source quench
+Type - 11 - Time exceeded
+Type - 12 - Parameter problem
+Type - 5  - Redirection
+
+Query
+Type - 8/0  - Echo(request/reply)
+Type - 13/14  - Timestamp (req./rep.)
+Type - 18/18 - Address mask (req./rep.)
+Type - 10/9 - Router solicitation/advertisement
+
+
+IP Datagram - IPv6 Header 20 bytes - ICMP Message
+
+
+0-7,8-15,16-31
+8-bit type,8-bit code, 16-bit checksum
+contents depend on type and code
+
+
+ICMP Firewall rules
+
+The only essential ICMP traffic is type 3
+Optional types 0,8,11
+
+
+
+
+
+Discovering ICMPv6
+
+ICMPv6 - is used by IPv6 nodes to report errors encountered in processing packets, and to perform other internet-layer functions,
+such as disgnostics (ICMPv6 "ping"). ICMPv6 is an integral part of IPv6, and the base protocol (all the messages nd behavior required
+by this specification) MUST be fully implemented by every IPv6 Node.
+
+
+ICMPv6
+
+Must be implemented by every IP module
+No data is exchanged
+Used to communicate updates or error messages
+Used by the ping utility echo request/echo reply
+
+
+
+IP Datagram - IPv6 Header | ICMPv6 Message
+
+
+ICMPv6 Messages
+
+  Error messages, Informational messages, Neighbor Discovery Messages,- ND Protocol, Group Membership Messages ,- MLD Protocol
+
+ICMPv6 Error Messages
+
+  Destination unreachable, Packet too big, Time Exceeded, Parameter problems
+
+ICMPv6 Informational Messages
+
+  Echo Request, Echo Reply
+
+
+
+
+
+
+
