@@ -1,0 +1,8 @@
+Subset, save, and export
+
+Here are the key takeaways from the video:
+
+Filtering and Exporting: You can use display filters to narrow down specific traffic, such as HTTP, and export objects from the capture for further analysis.
+Adding Comments: It's possible to add comments to capture files for future reference, which helps in keeping track of why certain actions were taken.
+Saving Specific Packets: Wireshark allows you to save a subset of packets from a large capture file, making it easier to manage and analyze specific data.
+
