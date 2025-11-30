@@ -1,0 +1,12 @@
+Understand ARP
+
+Local Area Network
+On a LAN, the data link layer uses the MAC address of the destination machine rather than the IP Address
+Address Resolution Protocol (ARP) provides IP address to MAC address resolution.
+
+
+It resides between Layer 3(Network) and Layer 2(Data Link Layer)
+
+Gratuitous ARP - A test for duplicate IP address on a LAN
+
+packetlife.net - ARP File, open on wireshark
