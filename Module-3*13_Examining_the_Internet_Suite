@@ -1,0 +1,52 @@
+Using HTTP
+
+Hypertext Transfer Protocol
+
+In use on the web since the 1990s
+A client-server model
+Uses TCP Port 80 Default
+
+HTTP Client
+Sends HTTP requests
+Indicates what the client wants
+
+
+HTTP Server
+Responds with a status code
+Server Information
+Requested Data
+
+
+HTTP Status Codes
+1xx - Informational
+2xx - Success
+3xx - Redirection
+4xx - Client Error
+404 - Not Found
+5xx - Server Error
+
+
+Ethernet II Protocol
+Source:
+Destination:
+        
+      Internet Protocol
+      Source:
+      Destination:
+
+
+            Transmission Control Protocol
+            Source:
+            Destination:
+
+
+
+
+HTTP Header - General Header,Request/response header, Entity header
+
+
+
+
+
+
+
