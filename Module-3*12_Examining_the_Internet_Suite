@@ -1,0 +1,32 @@
+FTP Transaction
+
+Resides at the application layer of the OSI Model
+
+FTP transfers file using TCP ports 20 and 21
+
+Port 21 = command channel on the FTP server
+Port 20 = secondary port used to transfer data
+
+
+
+FTP Reply codes
+
+120 - Service ready in nn minutes
+200 - Command okay
+500 - Syntax Error
+213 - File status
+
+
+Active Request - The client initiates a data transfer
+FTP server maintains state information
+  Current directory and any user authentication
+
+
+PASV Request - Preferred for clients behind a firewall and is more secure
+  The client, not the server, initiates the transfer
+Asks the server to accept a data connection on a new TCP port
+  Server normally accepts with code 227
+  Server provides a port
+
+
+
