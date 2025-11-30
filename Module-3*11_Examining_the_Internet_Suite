@@ -1,0 +1,26 @@
+Exploring DHCP
+
+Dynamic Host Configuration Protocol - works at the application layer of the OSI Model
+
+
+Dynamically assigns IP addresses on a local area network
+
+Uses UDP for transport
+
+Client uses port 68
+Server uses port 67
+
+DORA Process
+
+  Client -> Server = Discovery         TIME
+  Server -> Client = Offer              |
+  Client -> Server = Request            |  
+  Server -> Client = Acknowledge        V
+
+DHCP Process
+
+
+Wireshark now uses DHCP as the display filter for DHCP
+
+
+
