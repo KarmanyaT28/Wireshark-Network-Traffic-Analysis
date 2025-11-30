@@ -1,0 +1,20 @@
+Question 1 of 4
+The TCP _____ is the amount of information that a machine can receive during a session and still be able to process the data.
+
+Window Size
+
+
+Question 2 of 4
+In the Expert system the color _____ provides information about typical workflow such as TCP window update or connection finish.
+
+gray
+
+
+In Cloudshark we can use _____ to see where the endpoints are in the world.
+
+GEOIP
+
+Question 4 of 4
+If you right click on either a header or a field value and select "_____ as Filter", Wireshark will create and run the filter in the Display filter area.
+
+Prepare
