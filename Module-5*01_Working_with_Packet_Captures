@@ -1,0 +1,16 @@
+
+
+The wireshark expert system
+
+
+Expert System
+  Helps to alert the admin on possible issues
+  Only a guide
+
+The expert info console
+  Errors - indicate serious problems
+  Warnings - indicate possible problems
+  Notes - items of interest
+  Chats - typical workflow and state change
+
+
