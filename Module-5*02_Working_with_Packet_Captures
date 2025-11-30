@@ -1,0 +1,19 @@
+Network Latency Issues
+
+Cause for concern
+
+  Zero Window
+  Keep-alive
+  Duplicate ACKs
+  Retransmissions/fast retransmissions
+  Spurious retransmission
+
+
+
+High Latency
+
+  Processing delays
+  Distance
+  Queuing delays (bufferbloat)
+
+
