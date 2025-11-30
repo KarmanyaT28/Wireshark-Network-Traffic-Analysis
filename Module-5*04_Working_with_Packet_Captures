@@ -4,3 +4,12 @@ CloudShark Interface: CloudShark provides an interface similar to Wireshark for 
 Analysis Tools: It includes various analysis tools like 'Follow the Stream' and 'Threat Assessment' to evaluate network traffic and potential threats.
 GeoIP World Map: This feature helps identify the geographic locations of endpoints in the network traffic.
 Exporting Files: You can export packet capture files from CloudShark and analyze them further in Wireshark.
+
+
+
+Wireshark Essential Training - 
+
+Traffic Capture Overview
+Getting started with Wireshark
+Deep packet analysis of common protocols
+Working with packet captures
