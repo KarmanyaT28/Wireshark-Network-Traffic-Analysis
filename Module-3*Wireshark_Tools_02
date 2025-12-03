@@ -1,0 +1,20 @@
+Creating a flow graph
+
+Flow Graphs: Learn how to use flow graphs to visualize the exchange of data and identify connection issues.
+Protocol-Specific Statistics: Understand how to run statistics for specific protocols like DHCP, DNS, and HTTP to troubleshoot network issues.
+Flow Graphs: Learn how to use flow graphs to visualize the exchange of data and identify connection issues.
+Protocol-Specific Statistics: Understand how to run statistics for specific protocols like DHCP, DNS, and HTTP to troubleshoot network issues.
+
+
+
+Plotting an IO Graph
+
+Creating IO Graphs: Learn how to create IO graphs to compare characteristics in a capture file.
+Customizing Graphs: Understand how to customize graph names, display filters, colors, and styles for better visualization.
+Applying Filters: Discover how to apply filters to focus on specific issues like retransmissions and keep-alives.
+Zoom and Drag: Learn how to use zoom and drag features to navigate through the graph.
+Identifying Issues: Use IO graphs to identify overall traffic patterns and pinpoint problems such as retransmissions and keep-alives.
+
+
+
+
