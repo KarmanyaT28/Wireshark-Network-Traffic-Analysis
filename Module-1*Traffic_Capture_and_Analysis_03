@@ -1,0 +1,33 @@
+Getting ready to capture
+
+Selecting Interfaces: Learn how to choose specific interfaces for capturing network traffic.
+Capture Filters: Understand how to apply capture filters to focus on specific types of traffic.
+Output Options: Discover how to capture data to permanent or temporary files and use a ring buffer to manage large captures.
+Promiscuous Mode: Enable promiscuous mode to capture all traffic, including management, broadcast, and multicast traffic.
+
+
+Examining a capture
+
+Troubleshooting - It involves assessing trouble spots to determine the root cause of network congestion
+Assessing Network Performance - When users perceive the network is slow, there most likely are errors in the transmission of data or network congestion
+Performance Metrics
+  Latency - time it takes to transmit a packet and we can measure rount-trip time (RTT)
+  Throughput - how much data that is sent and received at any given time
+  Packet Loss - when data doesn't make it to the final destination
+Congestion Control
+  Indication of congestion
+    Keep-alives
+    Duplicates ACKs
+    Retransmissions
+Server Monitors the connection
+  The server keeps track of client acknowledging the data
+  If the server does not receive an acknowledgement in timely manner, the server will assume the packet is lost
+  This triggers a retransmission of the data
+
+Network Performance Metrics: Understand the importance of latency, throughput, and packet loss in assessing network performance.
+Identifying Issues: Learn how to use Wireshark to identify retransmissions and lost segments, which indicate network congestion or errors.
+Using Filters: Discover how to apply filters in Wireshark to focus on specific streams and analyze retransmissions effectively.
+
+
+
+
