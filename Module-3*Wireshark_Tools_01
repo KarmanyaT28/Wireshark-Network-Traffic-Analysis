@@ -1,0 +1,20 @@
+Conversations and Endpoints - Helps assess network efficiency
+Endpoint represents one side of a conversation
+Conversation is communication between two endpoints
+
+
+Important Message
+  Urgent request from the payroll manager
+  Something is not quite right
+  Everything seems to be slowed down
+  The whole department is complaining
+
+
+Port 16464 Details - speedguide.net
+
+Viewing Conversations and Endpoints: Learn how to view conversations and endpoints in a capture to assess network efficiency and security.
+Using netstat: Understand how to use the netstat command to display network connections and routing tables.
+Analyzing TCP Conversations: Discover how to analyze TCP conversations by examining local and foreign addresses and ports.
+Identifying Anomalies: Learn to identify unusual port usage and potential Trojan behavior by analyzing port numbers and IP addresses.
+Investigating Further: Understand the importance of further investigation when encountering suspicious activity, such as the ZeroAccess Trojan.
+
