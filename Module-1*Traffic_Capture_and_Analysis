@@ -1,0 +1,9 @@
+Module-1*Traffic_Capture_and_Analysis
+
+Getting the most out of wireshark - 
+
+
+Installation Process: The video covers how to install Wireshark on both PC and Mac, including the different options available during installation.
+Stable Releases: It explains the difference between Old Stable Release and Stable Release versions and why you might choose one over the other.
+NPcap Installation: The video highlights the importance of installing NPcap for packet capturing and the options available during its installation.
+Updating Wireshark: It emphasizes the importance of updating Wireshark to get the latest features and bug fixes
