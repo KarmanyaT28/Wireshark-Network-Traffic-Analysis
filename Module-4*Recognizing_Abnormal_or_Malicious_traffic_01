@@ -1,0 +1,34 @@
+Module-4*Recognizing_Abnormal_or_Malicious_traffic_01
+
+Troubleshooting the Network
+
+Describe the issue
+Gather the information and narrow the scope
+Consider what could have caused the problem
+Outline a plan to solve the problem
+Implement the plan
+Test the implementation
+Document the results and repeat if not resolved
+
+
+
+Prepare for Failure
+
+Have a physical and logical map of the network
+Have a list of all protocols used on the network
+Know how the traffic is switched and routed
+Describe all the points of contact from internal to external network
+Have an established baseline
+
+
+Baseline
+
+Plan
+Capture
+Analyze
+Save
+
+
+
+
+
