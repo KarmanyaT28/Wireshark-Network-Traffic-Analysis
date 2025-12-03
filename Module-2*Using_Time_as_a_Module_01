@@ -1,0 +1,22 @@
+Displaying Time
+
+Time Display Options: Learn about different time display formats in Wireshark, such as seconds since the beginning of capture, seconds since the previously captured packet, and seconds since the previously displayed packet.
+Precision Settings: Understand how to set the precision for time display to get the best accuracy.
+Identifying Gaps: Discover how to identify gaps in transmission by applying display filters and analyzing the time between packets.
+TCP Stream Graphs: Learn how to use TCP stream graphs to visualize transmission delays and gaps in data transmission.
+
+Viewing Details and Expert Info
+
+Capture File Properties: Learn how to access and interpret metadata about a capture, including time, duration, and interface information.
+Expert Information Panel: Understand how to use the expert system to identify and investigate potential problems in the capture, categorized by severity and type.
+Filtering and Searching: Discover how to filter and search for specific packets or errors within the capture to streamline analysis.
+
+Graphing the TCP Streams
+
+Visualizing TCP Data Streams: Learn how to visualize TCP data streams using TCP stream graphs.
+Analyzing Time Gaps: Understand how to analyze time gaps in the data stream to identify delays or congestion.
+Window Scaling and Round Trip Time: Discover how to use window scaling and round trip time graphs to assess network performance.
+Throughput and Goodput: Learn the difference between throughput and goodput and how to visualize them.
+Selective Acknowledgments: Understand the role of selective acknowledgments in TCP and how to visualize them using TCP time sequence graphs.
+
+
