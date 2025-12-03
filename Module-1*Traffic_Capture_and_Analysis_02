@@ -1,0 +1,27 @@
+Navigating the wireshark interface
+
+Launching Wireshark: The video explains the streamlined interface of Wireshark and how to navigate the welcome screen.
+Capturing Packets: It covers how to begin capturing packets and the use of capture filters and interfaces.
+Analyzing Captures: The video demonstrates how to open a packet capture file, use coloring rules, and the intelligent scroll bar to identify problems.
+File Menu: It details the options available in the File menu, including exporting specified packets and saving captured data.
+
+Investigating the Edit Menu choice
+
+Finding Packets: Learn how to use the Find options to locate specific packets within a capture.
+Marking Packets: Understand how to mark packets of interest and add comments for future reference.
+Ignoring Packets: Discover how to ignore certain packets that are not relevant to your analysis.
+Setting Time References: Learn to set time references to analyze specific segments of a large capture.
+Preferences: Explore how to customize Wireshark's appearance and behavior through the Preferences menu.
+
+
+Exploring the View Menu Choice
+
+Toolbar and Status Bar: Learn how to toggle the main toolbar, display filter, and status bar for a more customized view.
+Full Screen Mode: Understand how to use full screen mode to expand the screen and view all elements more clearly.
+Panel Display Options: Discover how to customize the display of packet lists, details, and bytes.
+Name Resolution: Learn about name resolution options for physical, transport, and network addresses.
+Zoom and Subtrees: Explore the zoom feature and how to expand or collapse subtrees for detailed packet analysis.
+Reloading Captures: Understand how to reload captures to revert any modifications made during analysis.
+
+
+
