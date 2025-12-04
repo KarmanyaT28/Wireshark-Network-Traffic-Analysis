@@ -1,0 +1,24 @@
+Module-4*Recognizing_Abnormal_or_Malicious_traffic_02
+
+
+Spotting an ARP Storming
+Identifying ARP Storms: Use Wireshark to filter for ARP broadcasts and create an IO graph to visualize the traffic.
+Potential Causes: ARP storms can result from hardware misconfiguration, attacks, or malware.
+Impact and Action: ARP storms degrade network performance and should be investigated to stop the activity.
+
+
+Multicast
+One-to-many or many-to-many
+Multicast range is 224.0.0.0 239.255.255.255
+
+Multicast traffic may become bursty
+
+Bursty traffic can disrupt traffic
+Bursty traffic can disrupt the flow of traffic
+When traffic reaches a device , the device may be full or overwhelmed by the burst and can result in an output drop.
+
+
+Multicast Traffic Range: Multicast traffic ranges between 224.0.0.0 to 239.255.255.255 and is used in various applications.
+Bursty Traffic: Multicast traffic can become bursty, disrupting the flow of traffic and causing output drops.
+Traffic Management: Policing flattens bursts, while shaping smooths the output to manage traffic better.
+Wireshark Analysis: Use Wireshark to analyze multicast traffic, create filters, and run I/O graphs to identify bursty traffic and output drops.
