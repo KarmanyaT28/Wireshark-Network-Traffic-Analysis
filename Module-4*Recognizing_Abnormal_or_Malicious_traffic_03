@@ -1,0 +1,20 @@
+Protecting from Packet Sniffing
+
+Prevent Packet Sniffing: Ensure that packet sniffing is only done by authorized individuals to protect sensitive information.
+Use Encryption: Always use encryption to protect your data, especially when logging into websites.
+Avoid Insecure Sites: Do not visit insecure sites to prevent exposure of sensitive information.
+
+Examining Macof Attacks
+Holds the pairing of MAC Addresses and the switchports
+The table can contain thousands of these pairings
+
+Macof attack will disrupt traffic
+The attack must continue to bombard the switches with those bogus entries
+And when it stops though, the timers will be reset and then the switch will resort back to being like a switch,
+  Secure your switches to prevent this type of attack
+
+
+Macof Attack Mechanism: A Macof attack floods the MAC address table with bogus entries, causing the switch to act like a hub.
+Detection: Use Wireshark to capture and analyze packets, identifying numerous SYN packets without acknowledgements.
+Prevention: Secure your switches by using port security to prevent such attacks.
+
